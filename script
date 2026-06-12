@@ -1,0 +1,26 @@
+let score = 0;
+const scoreDisplay = document.getElementById('score');
+
+function collectItem(isOrganic, element) {
+    if (isOrganic) {
+        // Ganha pontos se for lixo orgânico (lixeira marrom)
+        score += 10;
+        scoreDisplay.textContent = score;
+        element.style.visibility = 'hidden'; // Esconde o item coletado
+        alert('Muito bem! Isso é orgânico e vai para a lixeira marrom.');
+    } else {
+        // Penalidade se errar o tipo de lixo
+        alert('Ops! Esse lixo não é orgânico. Procure a lixeira correta para ele.');
+    }
+}
+
+function resetGame() {
+    score = 0;
+    scoreDisplay.textContent = score;
+    
+    // Faz todos os itens reaparecerem
+    const items = document.querySelectorAll('.item');
+    items.forEach(item => {
+        item.style.visibility = 'visible';
+    });
+}
