@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Agrinho: Protegendo Nossos Rios</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Projeto Agrinho: Preservação Ambiental</h1>
+        <p>Cuide dos nossos rios e dos animais. Jogue o lixo orgânico no lugar certo!</p>
+    </header>
+
+    <main>
+        <section class="info-section">
+            <h2>Nossos Rios e Animais</h2>
+            <p>Os rios são as veias do nosso planeta. Quando jogamos lixo neles, destruímos o habitat de peixes, capivaras, garças e muitos outros animais que dependem da água limpa para sobreviver.</p>
+        </section>
+
+        <section class="game-section">
+            <h2>Jogo da Reciclagem: Lixeira Marrom (Orgânicos)</h2>
+            <p>Ajude a limpar as margens do rio! Clique apenas nos <strong>resíduos orgânicos</strong> para jogá-los na lixeira marrom e marcar pontos.</p>
+            
+            <div class="score-board">
+                Pontos: <span id="score">0</span>
+            </div>
+
+            <div class="game-container">
+                <div class="items-container" id="items-container">
+                    <div class="item organic" onclick="collectItem(true, this)">🍎 Resto de Maçã</div>
+                    <div class="item plastic" onclick="collectItem(false, this)">🍾 Garrafa Pet</div>
+                    <div class="item organic" onclick="collectItem(true, this)">🍌 Casca de Banana</div>
+                    <div class="item metal" onclick="collectItem(false, this)">🥫 Lata de Refri</div>
+                    <div class="item organic" onclick="collectItem(true, this)">🍂 Folhas Secas</div>
+                </div>
+
+                <div class="trash-can-brown">
+                    <div class="lid"></div>
+                    <div class="can-body">ORGÂNICO</div>
+                </div>
+            </div>
+            
+            <button id="reset-btn" onclick="resetGame()">Jogar Novamente</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>Projeto desenvolvido para conscientização ambiental - Agrinho 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
